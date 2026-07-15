@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score
 st.set_page_config(page_title="Iris Classifier & Visualizer", page_icon="🌸", layout="centered")
 
 st.title("🌸 Iris Flower Classification App")
-st.write("Yeh app Iris flower ke species ko predict karti hai aur alag-alag ML models aur data distribution ko visualize karti hai.")
+st.write("This app predicts the species of iris flower and visualizes different ML models and data distribution.")
 
 # =========================================================
 # SECTION 1: ALL 5 GRAPHS SECTION (Using Tabs)
@@ -101,9 +101,9 @@ try:
         st.pyplot(fig5)
 
 except FileNotFoundError:
-    st.warning("⚠️ 'iris.csv' file nahi mili! Graphs dekhne ke liye 'iris.csv' ko GitHub par push karein.")
+    st.warning("⚠️ 'iris.csv'file not found! Please push 'iris .csv'to github for data visualization.")
 except Exception as e:
-    st.error(f"Graph load karne mein koi issue aaya: {e}")
+    st.error(f"Error loading graphs : {e}")
 
 
 # =========================================================
@@ -111,7 +111,7 @@ except Exception as e:
 # =========================================================
 st.markdown("---")
 st.subheader("🔮 Make a Live Prediction")
-st.write("Apne flower ke measurements enter karein:")
+st.write("enter the flower measurements below :")
 
 try:
     # Load Saved Model
@@ -137,4 +137,4 @@ try:
         st.success(f"🎉 Predicted Flower Species: **{prediction[0]}**")
 
 except FileNotFoundError:
-    st.error("❌ 'model.pkl' file nahi mili!")
+    st.error("❌ 'model.pkl' file not fopund !")
